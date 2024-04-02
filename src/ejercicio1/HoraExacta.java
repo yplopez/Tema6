@@ -40,7 +40,7 @@ public class HoraExacta extends Hora{
 	@Override
 	public String toString() {
 		String horaExacta;
-System.out.println("ss"+hora);
+
 		if (this.segundo < 10) {
 			horaExacta = hora + " : " + "0" + minuto + " : " + "0" + this.segundo;
 		} else {
