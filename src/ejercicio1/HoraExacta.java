@@ -3,6 +3,13 @@ package ejercicio1;
 public class HoraExacta extends Hora{
 
 	private int segundo;
+	
+	
+
+	public HoraExacta() {
+		super();
+		
+	}
 
 	public HoraExacta(int hora, int minuto, int segundo) {
 		super(hora, minuto);
@@ -15,6 +22,7 @@ public class HoraExacta extends Hora{
 		boolean isValid = false;
 		if (valorSeg >= 0 && valorSeg < 60) {
 			isValid = true;
+			this.segundo = valorSeg;
 		}
 		
 		return isValid;
@@ -32,12 +40,13 @@ public class HoraExacta extends Hora{
 	@Override
 	public String toString() {
 		String horaExacta;
-
+System.out.println("ss"+hora);
 		if (this.segundo < 10) {
-			horaExacta = this.hora + " : " + "0" + this.minuto + " : " + "0" + this.segundo;
+			horaExacta = hora + " : " + "0" + minuto + " : " + "0" + this.segundo;
 		} else {
-			horaExacta = this.hora + " : " + this.minuto;
+			horaExacta = hora + " : " + minuto + " : " + this.segundo;
 		}
+		
 
 		return horaExacta;
 	}

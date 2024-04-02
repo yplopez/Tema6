@@ -4,6 +4,12 @@ public class Hora {
 
 	protected int hora;
 	protected int minuto;
+	
+	
+
+	public Hora() {
+		
+	}
 
 	public Hora(int hora, int minuto) {
 		if (hora >= 0 && hora < 24) {
@@ -30,6 +36,7 @@ public class Hora {
 		boolean isValid = false;
 		if (valorMin >= 0 && valorMin < 60) {
 			isValid = true;
+			this.minuto = valorMin;
 		}
 
 		return isValid;
@@ -39,7 +46,9 @@ public class Hora {
 		boolean isValid = false;
 		if (valorHour >= 0 && valorHour < 24) {
 			isValid = true;
+			this.hora = valorHour;
 		}
+	 
 
 		return isValid;
 	}
