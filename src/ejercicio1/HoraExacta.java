@@ -4,12 +4,6 @@ public class HoraExacta extends Hora{
 
 	private int segundo;
 	
-	
-
-	public HoraExacta() {
-		super();
-		
-	}
 
 	public HoraExacta(int hora, int minuto, int segundo) {
 		super(hora, minuto);
@@ -33,22 +27,22 @@ public class HoraExacta extends Hora{
 		this.segundo++;
 		if(this.segundo == 60) {
 			this.segundo = 0;
+			super.inc();
 		}
-		super.inc();
 	}
 	
 	@Override
 	public String toString() {
-		String horaExacta;
+		String cadena = super.toString();
 
+		cadena += ":";
 		if (this.segundo < 10) {
-			horaExacta = hora + " : " + "0" + minuto + " : " + "0" + this.segundo;
-		} else {
-			horaExacta = hora + " : " + minuto + " : " + this.segundo;
+			cadena += "0";
 		}
+		cadena += segundo;
 		
 
-		return horaExacta;
+		return cadena;
 	}
 	
 	

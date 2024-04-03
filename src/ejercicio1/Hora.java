@@ -5,11 +5,6 @@ public class Hora {
 	protected int hora;
 	protected int minuto;
 	
-	
-
-	public Hora() {
-		
-	}
 
 	public Hora(int hora, int minuto) {
 		if (hora >= 0 && hora < 24) {
@@ -55,15 +50,16 @@ public class Hora {
 
 	@Override
 	public String toString() {
-		String horaExacta;
+		String cadena = "";
+		
+		cadena += this.hora + ":";
 
 		if (this.minuto < 10) {
-			horaExacta = this.hora + " : " + "0" + this.minuto;
-		} else {
-			horaExacta = this.hora + " : " + this.minuto;
+			cadena += "0";
 		}
+		cadena += this.minuto;
 
-		return horaExacta;
+		return cadena;
 	}
 
 }
