@@ -5,6 +5,12 @@ public class Producto {
 	protected String nombre;
 	protected double precio;
 	
+	
+	
+	public Producto() {
+		
+	}
+
 	public Producto (String nombre, double precio) {
 		if (nombre != null && !nombre.equals("")) {
 			this.nombre = nombre;
@@ -45,13 +51,19 @@ public class Producto {
 			this.precio = precio;
 		}
 	}
+	
+	public double calcular (int cantidad) {
+		return precio * cantidad;
+	}
 
 	@Override
 	public String toString() {
-		String cadena;
+		String productos = "";
 		
+		productos += "Nombre: " + this.nombre + "\n";
+		productos += "Precio: " + this.precio + "\n";
 		
-		return cadena;
+		return productos;
 	}
 	
 	
