@@ -12,11 +12,11 @@ public class Electrodomestico {
 
 	protected double precioBase = 100;
 
-	protected colores color = colores.BLANCO;
+	private colores color = colores.BLANCO;
 
-	protected consumoEnergetico conEnergetico = consumoEnergetico.F;
+	private consumoEnergetico conEnergetico = consumoEnergetico.F;
 
-	protected float peso = 5;
+	private float peso = 5;
 
 	public Electrodomestico() {
 
@@ -67,11 +67,11 @@ public class Electrodomestico {
 	}
 
 	public String getColor() {
-		return String.valueOf(color);
+		return String.valueOf(this.color);
 	}
 
 	public char getConsumo() {
-		return String.valueOf(conEnergetico).charAt(0);
+		return String.valueOf(this.conEnergetico).charAt(0);
 	}
 
 	public float getPeso() {
