@@ -13,7 +13,7 @@ public class Rectangulo extends Poligono {
 	 * Contructor sin parámetros
 	 */
 	public Rectangulo() {
-		
+		super(4);
 	}
 	/**
 	 * Constructor con parámetros
@@ -21,7 +21,7 @@ public class Rectangulo extends Poligono {
 	 * @param lado2 medida de lado 2
 	 */
 	public Rectangulo(double lado1, double lado2) {
-		super();
+		super(3);
 		if(lado1>0) {
 		this.lado1 = lado1;
 		}
@@ -32,19 +32,37 @@ public class Rectangulo extends Poligono {
 	
 	
 	
+	public double getLado1() {
+		return lado1;
+	}
+	public void setLado1(double lado1) {
+		if(lado1>0) {
+			this.lado1 = lado1;
+			}
+	}
+	public double getLado2() {
+		return lado2;
+	}
+	public void setLado2(double lado2) {
+		if(lado2>0) {
+			this.lado2 = lado2;
+			}
+	}
+	
+	
 	@Override
 	public String toString() {
 		String cadena = super.toString();
-		cadena += "Lado 1: " + this.lado1;
+		cadena += "Rectangulo: " + "Lado 1: " + this.lado1;
 		cadena += "Lado 2: " + this.lado2;
 		return cadena;
 	}
 	
 	
 	@Override
-	double area() {
-		double areaRec = lado1 * lado2;
-		return areaRec;
+	public double area() {
+		double areaTri = this.lado1 * this.lado2;
+		return areaTri;
 	}
 	
 	

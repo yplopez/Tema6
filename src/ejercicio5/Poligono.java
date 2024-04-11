@@ -18,7 +18,7 @@ public abstract class Poligono {
 	 * @param numeroLados del polígono
 	 */
 	public Poligono (int numeroLados) {
-		if (numeroLados>0) {
+		if (numeroLados > 2) {
 			this.numeroLados = numeroLados;
 		}
 	}
@@ -40,7 +40,8 @@ public abstract class Poligono {
 		return "Numero de Lados:" + getNumeroLados();
 	}
 	
-	abstract double area();
+	
+	public abstract double area();
 	
 	
 
